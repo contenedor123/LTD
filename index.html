@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTD</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <header>
+      <div id="menu-toggle">☰</div>
+        <nav class="floating-menu">
+            <ul>
+                <li><a href="#primerosect">INICIO</a></li>
+                <li><a href="#QuienesSomos">QUIENES SOMOS</a></li>
+                <li><a href="#backgroundSection">SERVICIOS</a></li>
+                <li><a href="#Contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <img id="logo"  src="picture/logo-verde2.png" alt="">
+    </header>
+    <section class="hero-section" id="primerosect">
+      <div class="hero-content">
+        <img src="picture/logo-verde2.png" alt="" id="logoverde">
+        <h2>Contenedores, áridos y otros servicios</h2>
+        <p id="text-tarjeta1">Con un firme compromiso hacia la excelencia, brindamos soluciones integrales y eficientes para la construcción y obras civiles.</p>
+        <a href="https://wa.me/2616660415" class="cta-button">CONOCE MAS</a>
+      </div>
+      <img src="picture/pngwing.com.png" alt="Excavadora JCB amarilla, símbolo de potencia y precisión en maquinaria de construcción" class="maquinaria-image">
+    </section>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const heroContent = document.querySelector('.hero-content');
+        const maquinariaImage = document.querySelector('.maquinaria-image');
+  
+        // Animación de entrada para el contenido
+        heroContent.style.opacity = '0';
+        heroContent.style.transform = 'translateX(-100px)';
+        setTimeout(() => {
+          heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
+          heroContent.style.opacity = '1';
+          heroContent.style.transform = 'translateX(0)';
+        }, 300);
+  
+        // Animación de entrada para la imagen
+        maquinariaImage.style.opacity = '0';
+        maquinariaImage.style.transform = 'translateX(100px)';
+        setTimeout(() => {
+          maquinariaImage.style.transition = 'opacity 1s ease, transform 1s ease';
+          maquinariaImage.style.opacity = '1';
+          maquinariaImage.style.transform = 'translateX(0)';
+        }, 800);
+  
+        // Efecto parallax suave
+        window.addEventListener('scroll', () => {
+          const scrolled = window.pageYOffset;
+          heroContent.style.transform = `translateY(${scrolled * 0.1}px)`;
+          maquinariaImage.style.transform = `translateY(${scrolled * 0.15}px)`;
+        });
+  
+        // Función para ajustar la visibilidad de la imagen en pantallas pequeñas
+        function adjustImageVisibility() {
+          if (window.innerWidth <= 768) {
+            maquinariaImage.style.opacity = '0.3';
+          } else {
+            maquinariaImage.style.opacity = '1';
+          }
+        }
+  
+        // Llamar a la función al cargar y al cambiar el tamaño de la ventana
+        window.addEventListener('resize', adjustImageVisibility);
+        adjustImageVisibility();
+      });
+    </script>
+
+
+<!--V2 quienes somos-->
+
+<section class="quienes-somos" id="QuienesSomos">
+  <div class="container23">
+      <h1 id="quienessomos">Quienes Somos</h1>
+      
+      <div class="card1">
+          <h2 id="sub-titu">Nuestra Historia</h2>
+          <p>Somos una empresa comprometida con la excelencia y la innovación. Desde nuestra fundación en 2010, nos hemos dedicado a proporcionar soluciones de alta calidad a nuestros clientes en el campo de la tecnología y el desarrollo web. Nuestro equipo de expertos trabaja incansablemente para mantenerse a la vanguardia de las últimas tendencias y tecnologías, asegurando que nuestros clientes siempre reciban lo mejor.</p>
+          <p>Con un enfoque centrado en el cliente y un compromiso inquebrantable con la calidad, hemos logrado construir relaciones duraderas con empresas de todos los tamaños y sectores. Nuestra misión es simple: ayudar a nuestros clientes a alcanzar sus objetivos a través de soluciones tecnológicas innovadoras y eficientes.</p>
+      </div>
+      
+      <h2 id="tituoloclientessatisfechos">Clientes Satisfechos</h2>
+      <div class="clients">
+          <div class="client-card">
+              <div class="client-avatar">
+                <img src="picture/perfil hombre1.png" alt="">
+              </div>
+              <h3>Mario González</h3>
+              <p>"Trabajar con este equipo ha increíble. Su profesionalismo y dedicación son incomparables."</p>
+          </div>
+          <div class="client-card">
+            <div class="client-avatar">
+              <img src="picture/perfil mujer.png" alt="">
+            </div>
+              <h3>Juana Pérez</h3>
+              <p>"La calidad de su trabajo superó todas nuestras expectativas. Definitivamente los recomendaría."</p>
+          </div>
+          <div class="client-card">
+            <div class="client-avatar">
+              <img src="picture/perfil hombre 2.png" alt="">
+            </div>
+              <h3>Nicolas Martínez</h3>
+              <p>"Su atención al detalle y su capacidad para entender nuestras necesidades fueron excepcionales."</p>
+          </div>
+      </div>
+
+      <h2 id="tituoloclientessatisfechos">Trabajaron con nosotros</h2>
+  </div>
+  <div id="img">
+    <img class="img1"  src="picture/logo963.png" alt="">
+    <img class="img1"  src="picture/logoTransparente1.png" alt="">
+    <img class="img1"   src="picture/procon-logo-c.png" alt="">
+    <img class="img1"   src="picture/Logo_Secco_2018.png" alt="">
+    <img class="img1"   src="picture/imagen_2021-12-01_114358.png" alt="">
+</div>
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Fin de v2 quienes somos-->
+
+
+
+
+<section class="collage-section" id="backgroundSection">
+    <h1>Nuestros Servicios</h1>
+    <div class="collage-container">
+        <div class="collage-item">
+            <img src="picture/1card contenedor basura.JPG" alt="Contenedor de basura lleno de escombros">
+            <div class="title-overlay">Gestión de Residuos</div>
+            <div class="info-card">Recolección y disposición eficiente de escombros y residuos de construcción.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/6card obradores.jpg" alt="Obradores en sitio de construcción">
+            <div class="title-overlay">Obradores</div>
+            <div class="info-card">Instalaciones temporales para personal y equipos en obras de construcción.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/5card maquinaria.jpg" alt="Maquinaria pesada en obra">
+            <div class="title-overlay">Maquinaria Pesada</div>
+            <div class="info-card">Equipos especializados para movimiento de tierras y construcción.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/4card aridos.jpg" alt="Áridos para construcción">
+            <div class="title-overlay">Suministro de Áridos</div>
+            <div class="info-card">Provisión de materiales como arena, grava y piedra triturada para proyectos.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/camion de agua.jpg" alt="Camión cisterna de agua">
+            <div class="title-overlay">Servicio de Agua</div>
+            <div class="info-card">Suministro de agua a granel para obras y situaciones especiales.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/contenedores.jpeg" alt="Contenedores industriales">
+            <div class="title-overlay">Alquiler de Contenedores</div>
+            <div class="info-card">Contenedores para almacenamiento y transporte de materiales.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/2card residuos organicos.webp" alt="Residuos orgánicos y compost">
+            <div class="title-overlay">Gestión de Residuos Orgánicos</div>
+            <div class="info-card">Soluciones sostenibles para el manejo y reciclaje de residuos orgánicos.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/3card tratamiento de poda.JPG" alt="Tratamiento de poda">
+            <div class="title-overlay">Tratamiento de Poda</div>
+            <div class="info-card">Servicios de poda y gestión de residuos vegetales.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/camion.jpeg" alt="Camión de carga">
+            <div class="title-overlay">Transporte de Materiales</div>
+            <div class="info-card">Servicios de transporte de materiales de construcción y residuos.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/contenedores.webp" alt="Contenedores de reciclaje">
+            <div class="title-overlay">Reciclaje</div>
+            <div class="info-card">Sistemas de separación y reciclaje de residuos en obra.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/acoplado.jpeg" alt="Acoplado de camión">
+            <div class="title-overlay">Equipos de Transporte</div>
+            <div class="info-card">Acoplados y remolques para transporte de maquinaria y materiales.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/conarsac-blog-movimiento-de-tierras.jpg" alt="Excavadora en movimiento de tierras">
+            <div class="title-overlay">Movimiento de Tierras</div>
+            <div class="info-card">Servicios de excavación y preparación de terrenos para construcción.</div>
+        </div>
+        <div class="collage-item">
+            <img src="picture/excavadora1.png" alt="Excavadora en obra">
+            <div class="title-overlay">Excavación Especializada</div>
+            <div class="info-card">Trabajos de excavación precisos para proyectos de construcción complejos.</div>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.collage-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                document.querySelectorAll('.collage-item.active').forEach(activeItem => {
+                    if (activeItem !== item) {
+                        activeItem.classList.remove('active');
+                    }
+                });
+                item.classList.add('active');
+            });
+        });
+    
+        document.querySelector('.collage-container').addEventListener('mouseleave', () => {
+            document.querySelectorAll('.collage-item.active').forEach(item => {
+                item.classList.remove('active');
+            });
+        });
+        </script>
+
+
+
+
+</section>
+
+<script>
+document.querySelectorAll('.collage-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        document.querySelectorAll('.collage-item.active').forEach(activeItem => {
+            if (activeItem !== item) {
+                activeItem.classList.remove('active');
+            }
+        });
+        item.classList.add('active');
+    });
+});
+
+document.querySelector('.collage-container').addEventListener('mouseleave', () => {
+    document.querySelectorAll('.collage-item.active').forEach(item => {
+        item.classList.remove('active');
+    });
+});
+</script>
+
+
+
+    <!--Aqui comienza nuestros servicios-->
+   
+
+
+
+
+
+
+
+<!--Aqui finaliza-->
+
+
+
+
+
+
+    <section id="Contacto">
+        
+        <div class="contacto-container">
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.40683552964!2d-68.74717182433044!3d-32.94026667359592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0dbd25a8121f%3A0x771cc6554ab49a02!2sContenedores%20LTD!5e0!3m2!1ses-419!2sar!4v1724684146519!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="formulario-contacto">
+                <h1>Contáctanos</h1>
+                <p>Estamos aquí para ayudarte. Comunícate con nosotros y descubre cómo podemos colaborar para alcanzar tus objetivos.</p>
+                <form id="formulario-contacto1">
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="consulta">Consulta:</label>
+                    <textarea id="consulta" name="consulta" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h2>Contacto</h2>
+                <p>Teléfono: 2616660415</p>
+                <p>Email: carlosletard@gmail.com</p>
+                <p>Dirección: Contenedores LTD
+                    Concordia sur 1501, M5525 Guaymallén, Mendoza</p>
+            </div>
+            <div class="footer-social">
+            
+                <a href="https://www.instagram.com/tu_perfil" target="_blank" class="social-icon">
+                    <img src="https://img.icons8.com/?size=100&id=RhYNENh5cxlS&format=png&color=000000" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100071519381112" target="_blank" class="social-icon">
+                    <img src="https://img.icons8.com/?size=100&id=kQzCK4emnaD2&format=png&color=000000" alt="Facebook">
+                </a>
+                <a href="https://wa.me/2616660415" target="_blank" class="social-icon">
+                    <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=000000" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/2616660415" class="whatsapp-button" target="_blank" title="Contáctanos por WhatsApp">
+        <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=000000" alt="WhatsApp" />
+    </a>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function () {
+        nav.classList.toggle('show');
+    });
+});
+    </script>
+
+    
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('nav').classList.toggle('active');
+});
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
